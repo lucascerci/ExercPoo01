@@ -1,9 +1,11 @@
 package UMLs;
 
+
 public class ContaBancaria {
+	private String primeiroNome;
+	private String segundoNome;
 	private String cpf;
 	private String rg;
-	private String nome;
 	private String tipo;
 	private boolean temConta;
 	
@@ -11,24 +13,33 @@ public class ContaBancaria {
 		//constructor
 	}
 	
-	public void createAccount() {
+	public void createAccount(String tipo) {
 		if(!this.temConta){
-			//Deseja criar uma conta?
-			//IF responsta === true -> Metodo de criar conta else responder Ent�o tchau
+			this.setTipo(tipo);
+			this.setTemConta(true);
 		}else {
-			//Return showMessage falando(Voce ja tem uma conta);
+	    	System.out.print("Você já possue uma conta");
 		}
 	}
 	
 	public void deleteAccount() {
 		if(this.temConta){
-			//Porque deseja deletar a conta?
-			//PQ SIM
-			//BLZ RETURN this.temConta == false;
+	    		this.temConta = false;
 		}else {
-			//Voce ainda nao tem uma conta return -> createAccount
+			System.out.print("Você ainda não tem uma conta");
 		}
-	} 
+	}
+	
+	
+	public void showAccount() {
+		if(this.temConta) {
+			System.out.print("Conta de " + this.getPrimeiroNome() + " " + this.getSegundoNome() +
+			"\nCpf: " + this.getCpf() + "\nRg: " +this.getRg()+ "\nTipo de conta: " + this.getTipo());
+		}else {
+			System.out.print("Nao possue conta ainda.");
+		}
+	}
+	
 	
 	
 	public String getCpf() {
@@ -43,12 +54,7 @@ public class ContaBancaria {
 	public void setRg(String rg) {
 		this.rg = rg;
 	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+
 	public String getTipo() {
 		return tipo;
 	}
@@ -60,6 +66,22 @@ public class ContaBancaria {
 	}
 	public void setTemConta(boolean temConta) {
 		this.temConta = temConta;
+	}
+
+	public String getSegundoNome() {
+		return segundoNome;
+	}
+
+	public void setSegundoNome(String segundoNome) {
+		this.segundoNome = segundoNome;
+	}
+
+	public String getPrimeiroNome() {
+		return primeiroNome;
+	}
+
+	public void setPrimeiroNome(String primeiroNome) {
+		this.primeiroNome = primeiroNome;
 	}	
 		
 }
