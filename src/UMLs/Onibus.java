@@ -5,6 +5,7 @@ public class Onibus {
 	private String tipoDeRoda;
 	private String tipoDeVolante;
 	private String tipoDeMotor;
+	private boolean ligado;
 	
 	public void andar() {
 		
@@ -56,6 +57,14 @@ public class Onibus {
 
 	public void setTipoDeMotor(String tipoDeMotor) {
 		this.tipoDeMotor = tipoDeMotor;
+	}
+
+	public boolean isLigado() {
+		return ligado;
+	}
+
+	public void setLigado(boolean ligado) {
+		this.ligado = ligado;
 	}
 	
 	
