@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author rickarof
+ * @author lucascerci
  *
  */
 module TrabalhoFacul {
