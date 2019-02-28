@@ -8,7 +8,7 @@ public class Onibus {
 	private boolean ligado;
 	
 	public void andar() {
-		
+ 
 	}
 	
 	public void parar() {
