@@ -17,7 +17,7 @@ public class UsuarioDigita {
 		    
 		    
 		    
-		    System.out.println("Salario do funcionario " + nome + " é de:" + somaSal(salario, porcentagem));
+		    System.out.println("Salario do funcionario " + nome + " \nSalario bruto:" + salario + "\nSalario liquido: " + somaSal(salario, porcentagem));
 
 	}
 	
